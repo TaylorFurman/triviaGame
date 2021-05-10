@@ -1,0 +1,27 @@
+#title{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 50%;
+}
+
+#question{
+    font-size: 20px;
+}
+#quizArea{
+    display:flex;
+    flex-direction: column;
+    column-gap: 20px;
+    font-size: 20px;
+    border: solid black;
+}
+
+#choices{
+    flex-grow:inherit;
+    width:200px;
+}
+
+li:hover{
+    opacity: 30%;
+    color: red;
+}
+
