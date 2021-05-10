@@ -3,8 +3,8 @@ const button1 = document.getElementById('answer');
 const button2 = document.getElementById('wrongChoice1');
 const button3 = document.getElementById('wrongChoice2');
 const button4 = document.getElementById('wrongChoice3');
-
-function doSomething(){
+const score = 0;
+function spawnQuestion(){
   axios
   .get('https://opentdb.com/api.php?amount=10&type=multiple&category=12')
   .then(res => {
@@ -24,26 +24,43 @@ function doSomething(){
         ul.appendChild(ul.children[Math.random() * i | 0]);
     }
   })
-  .then()
   .catch(err => console.error(err));
 }
 
-doSomething()
+spawnQuestion()
+
+function checkAnswer(){
+  axios .get('https://opentdb.com/api.php?amount=10&type=multiple&category=12')
+  .then(res =>{
+    if (button1 = res.data.results[0].correct_answer){
+    console.log('true');
+  }})
+  
+}
+
+function scoreUpdate(){
+  console.log(score + 1);
+}
 
 button1.onclick = function(){
-  window.location.reload();
+  checkAnswer();
+  scoreUpdate();
 }
 
 button2.onclick = function(){
+  checkAnswer();
+  scoreUpdate();
 
 }
 
 button3.onclick = function(){
-
+  checkAnswer();
+  scoreUpdate();
 }
 
 button4.onclick = function(){
-
+  checkAnswer();
+  scoreUpdate();
 }
 
 
