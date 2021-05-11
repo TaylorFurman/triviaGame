@@ -20,8 +20,22 @@
     width:200px;
 }
 
-li:hover{
+#answer:hover{
     opacity: 30%;
     color: red;
 }
 
+#wrongChoice1:hover{
+    opacity: 30%;
+    color: red;
+}
+
+#wrongChoice2:hover{
+    opacity: 30%;
+    color: red;
+}
+
+#wrongChoice3:hover{
+    opacity: 30%;
+    color: red;
+}

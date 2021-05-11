@@ -3,7 +3,14 @@ const button1 = document.getElementById('answer');
 const button2 = document.getElementById('wrongChoice1');
 const button3 = document.getElementById('wrongChoice2');
 const button4 = document.getElementById('wrongChoice3');
-const score = 0;
+
+var player1Score = 0;
+var player2Score = 0;
+var player3Score = 0;
+var player4Score = 0;
+
+
+
 function spawnQuestion(){
   axios
   .get('https://opentdb.com/api.php?amount=10&type=multiple&category=12')
@@ -24,22 +31,34 @@ function spawnQuestion(){
         ul.appendChild(ul.children[Math.random() * i | 0]);
     }
   })
+  .then(checkAnswer)
   .catch(err => console.error(err));
 }
 
-spawnQuestion()
-
 function checkAnswer(){
-  axios .get('https://opentdb.com/api.php?amount=10&type=multiple&category=12')
-  .then(res =>{
-    if (button1 = res.data.results[0].correct_answer){
-    console.log('true');
-  }})
-  
+  const answer = new Promise((resoultion, rejection) =>{
+    
+
+  });
 }
 
+
+spawnQuestion()
+  
+
+
+
+
 function scoreUpdate(){
-  console.log(score + 1);
+  button1.onclick = false;
+  button2.onclick = false;
+  button3.onclick = false;
+  button4.onclick = false;
+  if (button1.onclick == true){
+    player1Score = player1Score + 1;
+    console.log(player1Score);
+  }
+  
 }
 
 button1.onclick = function(){
@@ -63,8 +82,6 @@ button4.onclick = function(){
   scoreUpdate();
 }
 
-
-
 //keep below for reference
-axios.get("https://opentdb.com/api.php?amount=10&category=12")
-.then(res => console.log(res.data.results));
+
+
