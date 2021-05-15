@@ -14,23 +14,28 @@
     <div id="title">
         <p>Trivia</p>
     </div>
+    <p>Game Counter: <div id="gameCounter"></div></p>
+    <ol>
+        <li>Player One Attempts: <div id="p1Attempts"></div></li>
+        <li>Player Two Attempts: <div id="p2Attempts"></div></li>
+    </ol>
     
     <div id="quizArea">
         <div id="question"></div>
         <div id="choices">
             <ul id ="choiceArea">
-                <li id="answer"></li>
-                <li id="wrongChoice1"></li>
-                <li id="wrongChoice2"></li>
-                <li id="wrongChoice3"></li>
+                <li><button id="answer"></button></li>
+                <li><button id="wrongChoice1"></button></li>
+                <li><button id="wrongChoice2"></button></li>
+                <li><button id="wrongChoice3"></button></li>
             </ul>
         </div>
     </div>
     <button>Start Game</button>
 
-    <ol id="playerArea">
-        <li class="ui-widget-content">Player One Score: <li></li></li>
-        <li class="ui-widget-content">Player Two Score: <li></li></li>
+    <ol>
+        <li>Player One Score: <div id="p1Score"></div></li>
+        <li>Player Two Score: <div id="p2Score"></div></li>
     </ol>
 </body>
 
