@@ -13,12 +13,9 @@
 <body>
     <div id="title">
         <p>Trivia</p>
+        <p>1st to 10 points wins!</p>
     </div>
-    <p>Game Counter: <div id="gameCounter"></div></p>
-    <ol>
-        <li>Player One Attempts: <div id="p1Attempts"></div></li>
-        <li>Player Two Attempts: <div id="p2Attempts"></div></li>
-    </ol>
+    <div id="playerTurn"></div>
     
     <div id="quizArea">
         <div id="question"></div>
@@ -31,12 +28,12 @@
             </ul>
         </div>
     </div>
-    <button>Start Game</button>
-
-    <ol>
-        <li>Player One Score: <div id="p1Score"></div></li>
-        <li>Player Two Score: <div id="p2Score"></div></li>
-    </ol>
+    <button id="newGame">New Game</button>
+    
+    <ul>
+        <li>Player 1 Score: <div id="p1Score"></div></li>
+        <li>Player 2 Score: <div id="p2Score"></div></li>
+    </ul>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
