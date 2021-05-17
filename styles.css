@@ -1,44 +1,119 @@
 #title{
     font-size: 40px;
     font-weight: bold;
-    margin-left: 50%;
 }
+
+body{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background: rgba(253, 224, 224, 0.5);
+}
+.heading{
+    text-align: center;
+    border: 20px orange;
+    border-style: dashed solid;
+    background-color: rgb(214, 209, 209);
+    font-family: 'Goblin One', cursive;
+
+}
+
+#playerTurn{
+    margin-top: 20px;
+    border: solid;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Goblin One', cursive;
+}
+
 
 #question{
     font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Goblin One', cursive;
 }
 #quizArea{
-    display:flex;
-    flex-direction: column;
-    column-gap: 20px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 15px;
     border: solid black;
+    background-color: rgb(214, 209, 209);
 }
 
-#choices{
-    flex-grow:inherit;
-    width:200px;
+#choiceArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Goblin One', cursive;
+}
+
+#newGame{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+#scoreBox{
+    border: solid;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(214, 209, 209);
+    
 }
 
 #answer:hover{
     opacity: 30%;
     color: red;
+    border: solid 5px;
+    transition: border-width 0.6s linear;
 }
 
 #wrongChoice1:hover{
     opacity: 30%;
     color: red;
+    border: solid 5px;
+    transition: border-width 0.6s linear;
 }
 
 #wrongChoice2:hover{
     opacity: 30%;
     color: red;
+    border: solid 5px;
+    transition: border-width 0.6s linear;
 }
 
 #wrongChoice3:hover{
     opacity: 30%;
     color: red;
+    border: solid 5px;
+    transition: border-width 0.6s linear;
 }
+
+#newGame:hover{
+    opacity: 100%;
+    background-color: grey;
+    font-size: 40px;
+    color: green;
+    border: solid 5px;
+    transition: border-width 0.6s linear;
+    transition: background-color 0.6s linear;
+}
+
 
 #feedback { font-size: 1.4em; }
   #playerArea .ui-selecting { background: #FECA40; }
@@ -50,3 +125,6 @@
   li{
       list-style-type: none;
   }
+
+
+ 

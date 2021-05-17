@@ -2,16 +2,18 @@
 let player1Score = document.getElementById("p1Score")
 let player2Score = document.getElementById("p2Score")
 
-
-
+document.getElementById('p1Score').style.color = "#ff00b3";
+document.getElementById('p2Score').style.color = "#3cff00";
 //determining who's turn it is based on the window refresh counter
 let pTurn = document.getElementById("playerTurn")
 
 function playerTurn(){
   if(localStorage.getItem("counter")%2 !=0){
     pTurn.innerHTML = "Player 1's Turn!";
+    document.getElementById('playerTurn').style.backgroundColor = "#ff00b3";
   }else if (localStorage.getItem("counter")%2 ==0){
     pTurn.innerHTML = "Player 2's Turn!";
+    document.getElementById('playerTurn').style.backgroundColor = "#3cff00";
   }
 }
 playerTurn();
@@ -48,19 +50,19 @@ $('#answer').click(() =>{
 })
 
 $('#wrongChoice1').click(() =>{
-  alert("wrong answer");
+  alert("Wrong answer, lose 1 point");
   takePoint();
   window.location.reload();
 })
 
 $('#wrongChoice2').click(() =>{
-  alert("wrong answer");
+  alert("Wrong answer, lose 1 point");
   takePoint();
   window.location.reload();
 })
 
 $('#wrongChoice3').click(() =>{
-  alert("wrong answer");
+  alert("Wrong answer, lose 1 point");
   takePoint();
   window.location.reload();
 })
@@ -122,13 +124,13 @@ function addPoint(){
   if(localStorage.getItem('counter')%2 != 0){
     p1Score = parseInt(p1Score) + 1;
     localStorage.setItem("p1Score", p1Score);
-    alert("Player 1's score is: " + p1Score);
+    alert("Correct!!  Player 1's score is: " + p1Score);
     location.reload();
   }
   else if (localStorage.getItem('counter')%2 == 0){
     p2Score = parseInt(p2Score) + 1;
     localStorage.setItem("p2Score", p2Score);
-    alert("Player 2's score is: " + p2Score);
+    alert("Correct!!  Player 2's score is: " + p2Score);
     location.reload();
   }
 }

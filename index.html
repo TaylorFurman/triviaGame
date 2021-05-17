@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Trivia on Ice</title>
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
     
 </head>
 <body>
     <div id="title">
-        <p>Trivia</p>
-        <p>1st to 10 points wins!</p>
+        <div class="heading">
+            <p>Multiple Choice Trivia</p>
+            <h4>1st to 10 points wins!</h4>
+        </div>
     </div>
     <div id="playerTurn"></div>
     
@@ -28,12 +34,15 @@
             </ul>
         </div>
     </div>
-    <button id="newGame">New Game</button>
     
-    <ul>
+    
+    <ul id="scoreBox">
         <li>Player 1 Score: <div id="p1Score"></div></li>
         <li>Player 2 Score: <div id="p2Score"></div></li>
     </ul>
+    <button id="newGame">New Game</button>
+
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -41,6 +50,9 @@
 <script src="./scripts.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>$( function() {$( "#playerArea" ).selectable();} );</script>
+<script>$( function() {$( "#answer" ).selectable();} );</script>
+<script>$( function() {$( "#wrongChoice1" ).selectable();} );</script>
+<script>$( function() {$( "#wrongChoice2" ).selectable();} );</script>
+<script>$( function() {$( "#wrongChoice3" ).selectable();} );</script>
 
 </html>
