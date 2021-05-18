@@ -126,5 +126,42 @@ body{
       list-style-type: none;
   }
 
+  @media screen and (max-width: 600px){
+      body{
+          width: 60%;
+      }
+      .heading{
+          font-size: 50%;
+      }
+      #playerTurn{
+        font-size: 75%;
+    }
+    #question{
+        font-size: 75%;
+    }
+    #quizArea{
+        font-size: 75%;
+    }
+    #scoreBox{
+        font-size: 75%;
+    }
+    #answer{
+        font-size: 50%;
+    }
+    #wrongChoice1{
+        font-size: 50%;
+    }
+    #wrongChoice2{
+        font-size: 50%;
+    }
+    #wrongChoice3{
+        font-size: 50%;
+    }
+    #newGame{
+        font-size: 50%;
+    }
+
+  }
+
 
  

@@ -3,6 +3,51 @@ class Data {
     constructor(data){
         this.data = data
     }
+    spawnQuestion(){
+        axios
+        .get('https://opentdb.com/api.php?amount=50&type=multiple')
+        .then(res => {
+          //assign variables to specific data
+          var question = res.data.results[0].question;
+          var answer = res.data.results[0].correct_answer;
+          var wrongChoice1 = res.data.results[0].incorrect_answers[0];
+          var wrongChoice2 = res.data.results[0].incorrect_answers[1];
+          var wrongChoice3 = res.data.results[0].incorrect_answers[2]; 
+        });
+
+    }
+}
+
+var question = new Data(axios.get('https://opentdb.com/api.php?amount=50&type=multiple').res.data.result[0].question);
+question.spawnQuestion();
+
+var Accord = new Car('Sedan');
+Accord.getType();
+        
+
+
+function spawnQuestion(){
+    axios
+    .get('https://opentdb.com/api.php?amount=50&type=multiple')
+    .then(res => {
+      //assign variables to specific data
+      var question = res.data.results[0].question;
+      answer = res.data.results[0].correct_answer;
+      var wrongChoice1 = res.data.results[0].incorrect_answers[0];
+      var wrongChoice2 = res.data.results[0].incorrect_answers[1];
+      var wrongChoice3 = res.data.results[0].incorrect_answers[2];
+      //Display the question & answer choices
+      document.getElementById('question').innerHTML = question;
+      document.getElementById('answer').innerHTML = answer;
+      document.getElementById('wrongChoice1').innerHTML = wrongChoice1;
+      document.getElementById('wrongChoice2').innerHTML = wrongChoice2;
+      document.getElementById('wrongChoice3').innerHTML = wrongChoice3;
+      //randomize the questions (copied from internet)
+      var ul = document.querySelector('ul');
+      for (var i = ul.children.length; i >= 0; i--) {
+          ul.appendChild(ul.children[Math.random() * i | 0]);
+      }
+    })
 }
 
 class Car{
