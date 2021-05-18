@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>True or False Trivia</title>
+</head>
+<body>
+    <body>
+        <div id="title">
+            <div class="heading">
+                <p>True or False Trivia</p>
+                <h4>1st to 10 points wins!</h4>
+            </div>
+        </div>
+        <div id="playerTurn"></div>
+        
+        <div id="quizArea">
+            <div id="question"></div>
+            <div id="choices">
+                <ul id ="choiceArea">
+                    <li><button id="answer"></button></li>
+                    <li><button id="wrongChoice1"></button></li>
+                    <li><button id="wrongChoice2"></button></li>
+                    <li><button id="wrongChoice3"></button></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="scoreBox">
+            <li>Player 1 Score: <div id="p1Score"></div></li>
+            <li>Player 2 Score: <div id="p2Score"></div></li>
+        </ul>
+        <button id="newGame">New Game</button>
+        <p><a href="/index.html">Multiple Choice Questions</a></p>
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./scripts.js"></script>
+
+</body>
+</html>

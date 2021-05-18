@@ -19,7 +19,7 @@ function playerTurn(){
 playerTurn();
 
 
-function spawnQuestion(){
+function multipleChoice(){
   axios
   .get('https://opentdb.com/api.php?amount=50&type=multiple')
   .then(res => {
@@ -50,19 +50,19 @@ $('#answer').click(() =>{
 })
 
 $('#wrongChoice1').click(() =>{
-  alert("Wrong answer, lose 1 point");
+  alert("Wrong answer, the correct answer is ("+ answer +") lose 1 point");
   takePoint();
   window.location.reload();
 })
 
 $('#wrongChoice2').click(() =>{
-  alert("Wrong answer, lose 1 point");
+  alert("Wrong answer, the correct answer is ("+ answer +") lose 1 point");
   takePoint();
   window.location.reload();
 })
 
 $('#wrongChoice3').click(() =>{
-  alert("Wrong answer, lose 1 point");
+  alert("Wrong answer, the correct answer is ("+ answer +") lose 1 point");
   takePoint();
   window.location.reload();
 })
@@ -77,7 +77,8 @@ $('#newGame').click(() =>{
 
 //Calls API and displays question/answer choices
 
-spawnQuestion()
+multipleChoice()
+
 
 //checks score and clears local storage when players win
 checkScore()
