@@ -128,37 +128,37 @@ body{
 
   @media screen and (max-width: 600px){
       body{
-          width: 60%;
+          width: 75%;
       }
       .heading{
-          font-size: 50%;
+          font-size: 70%;
       }
       #playerTurn{
-        font-size: 75%;
+        font-size: 80%;
     }
     #question{
-        font-size: 75%;
+        font-size: 100%;
     }
     #quizArea{
-        font-size: 75%;
+        font-size: 80%;
     }
     #scoreBox{
-        font-size: 75%;
+        font-size: 80%;
     }
     #answer{
-        font-size: 50%;
+        font-size: 75%;
     }
     #wrongChoice1{
-        font-size: 50%;
+        font-size: 75%;
     }
     #wrongChoice2{
-        font-size: 50%;
+        font-size: 75%;
     }
     #wrongChoice3{
-        font-size: 50%;
+        font-size: 75%;
     }
     #newGame{
-        font-size: 50%;
+        font-size: 75%;
     }
 
   }
